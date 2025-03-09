@@ -1,0 +1,73 @@
+/* 全体設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    overflow-y: auto; /* 全体を縦スクロール可能に */
+    max-height: 100vh; /* 画面サイズに収まる高さ */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky; /* スクロールしてもヘッダーを固定 */
+    top: 0;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+/* テキストコンテナ */
+.text-container {
+    max-width: 800px;
+    height: 60vh; /* 高さを制限 */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* 縦方向にスクロール可能 */
+    overflow-x: hidden; /* 横スクロールは不要に */
+}
+
+/* テキストスタイル */
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .text-container {
+        padding: 15px;
+        margin: 10px;
+        height: 50vh; /* 小さい画面ではスクロールエリアを小さく */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    .text-container {
+        padding: 10px;
+        height: 40vh;
+    }
+}
